@@ -1,15 +1,19 @@
 <h1>Angular 2 with PrismJS</h1>
-<pre class="language-typescript">
-    <code prismjs class="language-typescript">
-import { Component, Type } from "@angular/core";
-import { PrismJsDirective } from "./prismjs.directive";
+<codeblock prismjs="typescript">
+import { Component, Type } from '@angular/core';
+import { PrismJsDirective } from "./prismjs/prismjs.directive";
+import { CodeblockComponent } from "./prismjs/codeblock.component";
 
 @Component({
     selector: 'my-app',
-    directives: [PrismJsDirective],
+    directives: [PrismJsDirective, CodeblockComponent],
     templateUrl: `app/app.component.html`
 })
 export class AppComponent {
     constructor() {}
 }
-</code></pre>
+</codeblock>
+
+<codeblock prismjs="bash">
+npm install ng-semantic --save
+</codeblock>
